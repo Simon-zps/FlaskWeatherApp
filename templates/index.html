@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Weather App!</title>
+	<link rel="stylesheet" type="text/css" href="../static/style123.css">
+</head>
+<body>
+	<div class="nav">
+		<h1>What's the weather like?</h1>
+	</div>
+
+	<div class="hero">
+		<div class="container">
+			<div class="searching">
+				<form method="POST">
+					<input type="text" name="yourcity" placeholder="Your City">
+					<input type="submit" name="submit" value="Search">
+				</form>
+			</div>
+
+			<div class="flashes">
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						{% for msg in messages %}
+							{{ msg }}
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
+			</div>
+
+			{% for weather in weather_data %}
+			<div class="weather">
+				<h2>{{ weather.city }}</h2>
+				<p>{{ weather.temperature }}°C</p>
+				{{ weather.description }}
+				<a href="{{ url_for('delete_city', name=weather.city) }}" ><img src="../static/exit2.png"></a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>

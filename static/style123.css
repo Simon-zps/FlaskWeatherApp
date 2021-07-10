@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	--our-color: #32e3ba;
+}
+
+body
+{
+	font-size: 18px;
+}
+.nav, .hero
+{
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav
+{
+	height: 10vh;
+	color: #fff;
+	background: #32e3ba;
+}
+
+.hero
+{
+    margin-top: 20vh;
+    margi-bottom: 5em;
+}
+
+.container
+{
+	margin-top: -5em;
+}
+
+.searching input
+{
+	font-size: 1.2em;
+	padding: .25em;
+}
+
+input[type='submit']
+{
+	color: #fff;
+	background: #32e3ba;
+	cursor: pointer;
+}
+
+.weather
+{
+	margin-top: 1em;	
+	color: gray;
+	border: 1px solid gray;
+	box-sizing: border-box;
+	padding: 1em;
+	border-radius: .1em;
+    background: #fff;
+	position: relative;
+}
+.weather h2
+{
+	color: black;
+}
+.weather p
+{
+	color: var(--our-color);
+}
+
+.weather img
+{
+    height: 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .3em;
+    cursor: pointer;
+}
+
+.flashes
+{
+	margin-top: .8em;
+	color: gray;
+}
