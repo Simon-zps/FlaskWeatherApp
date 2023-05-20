@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, url_for, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
+import credentials
 import requests
 
 
 app = Flask(__name__)
-app.secret_key = 'fsdjhbsefgy4'
+app.secret_key = credentials.secret_key
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cities.sqlite3'
 
 db = SQLAlchemy(app)
@@ -77,5 +78,6 @@ def clear_data():
 
 
 if __name__ == '__main__':
-    db.create_all()
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)

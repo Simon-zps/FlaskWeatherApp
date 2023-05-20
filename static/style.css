@@ -5,7 +5,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
-	--our-color: #32e3ba;
+	--our-color: #265e51;
 }
 
 body
@@ -24,13 +24,13 @@ body
 {
 	height: 10vh;
 	color: #fff;
-	background: #32e3ba;
+	background: #265e51;
 }
 
 .hero
 {
     margin-top: 20vh;
-    margi-bottom: 5em;
+    margin-bottom: 5em;
 }
 
 .container
@@ -47,7 +47,7 @@ body
 input[type='submit']
 {
 	color: #fff;
-	background: #32e3ba;
+	background: #265e51;
 	cursor: pointer;
 }
 
